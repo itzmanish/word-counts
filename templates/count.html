@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>count</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <a href="{% url 'home' %}">Word Count</a>
+
+    <h1>There is {{ length }} word on your text</h1>
+    <h1>Your text was:</h1>
+
+    {{ yourtext }}
+    <h1>count of words:</h1>
+    {% for word, count in sorted_words %}
+
+    {{word}} - {{count}}
+
+    <br>
+    {% endfor %}
+</body>
+
+</html>
